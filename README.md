@@ -26,7 +26,7 @@ Java design pattern
 - GeeksfoGeeks
 <br/>
 
-### UML class diagrams
+## UML class diagrams
 
 **What is UML?**  
 - graphical language that is standardized to describe software systems  
