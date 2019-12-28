@@ -25,7 +25,6 @@ Java design pattern
 - Gang of Four  
 - GeeksfoGeeks
 <br/>
-<br/>
 
 ### UML class diagrams
 
