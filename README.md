@@ -7,7 +7,7 @@ Java design pattern
 
 
 
-**object**  
+**Object**  
 - given UML(unified modeling langauge) class diagram -> minimal aircraft simulation program
 
 
