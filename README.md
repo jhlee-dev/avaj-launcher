@@ -24,9 +24,9 @@ Java design pattern
 
 - Gang of Four  
 - GeeksfoGeeks
-
-
-## UML class diagrams
+  
+  
+### UML class diagrams
 
 **What is UML?**  
 - graphical language that is standardized to describe software systems  
