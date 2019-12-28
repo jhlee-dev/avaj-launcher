@@ -1,7 +1,7 @@
 # avaj-launcher
 Java design pattern
 
-## Project description
+## Project description(pdf)
 
 **What to know**  
 - [ ] UML class diagrams
