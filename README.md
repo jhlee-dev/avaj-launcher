@@ -22,4 +22,8 @@ Java design pattern
 
 **Reference**
 
-- Gang of Four
+- Gang of Four  
+
+---
+
+## UML class diagrams
