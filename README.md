@@ -1,5 +1,5 @@
 # avaj-launcher
-java design pattern
+Java design pattern
 
 **What to know**  
 - [ ] UML class diagrams
