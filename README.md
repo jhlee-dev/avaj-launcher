@@ -23,7 +23,12 @@ Java design pattern
 **Reference**
 
 - Gang of Four  
+- GeeksfoGeeks
 
----
 
 ## UML class diagrams
+
+**What is UML?**  
+- graphical language that is standardized to describe software systems  
+
+**Benefits of UML**  
