@@ -40,7 +40,15 @@ Java design pattern
 - Help acquire the entire system in a view.
 
 ## UML - Building blocks
-
 ### Things
-**Structual things**
-**Behavioral things**
+**Structual things**  
+- Class
+
+**Behavioral things**  
+**Grouping things**  
+**Annotational things**  
+### Relationship
+**Dependency**  
+**Association**  
+**Generalization**  
+**Realization**  
