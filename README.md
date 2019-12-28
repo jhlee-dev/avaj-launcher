@@ -1,6 +1,8 @@
 # avaj-launcher
 Java design pattern
 
+## Project description
+
 **What to know**  
 - [ ] UML class diagrams
 - [ ] object oriented design patterns
@@ -21,14 +23,24 @@ Java design pattern
 - Java syntax
 
 **Reference**
-
 - Gang of Four  
 - GeeksfoGeeks
+- tutorialspoint
 <br/>
 
-## UML class diagrams
+## UML
 
 **What is UML?**  
+- UML stands for Unified Modeling Language.
 - graphical language that is standardized to describe software systems  
 
-**Benefits of UML**  
+**UML can..**  
+- Simplifie complex sofware design.
+- Reduce thousands of word in a few graphical diagrams.
+- Help acquire the entire system in a view.
+
+## UML - Building blocks
+
+### Things
+**Structual things**
+**Behavioral things**
