@@ -1,10 +1,12 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Tower {
 
-	private Flyable* observers;
+	private Flyable observers;
 
 	public void register(Flyable flyable) {
 		this.observers = flyable;
@@ -23,7 +25,7 @@ public class Tower {
 		}
 	}
 	public void unregister(Flyable flyable) {
-		observers = null;
+		this.observers = null;
 	}
 	protected void conditionsChanged() {
 		observers.updateConditions();

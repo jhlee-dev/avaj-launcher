@@ -28,25 +28,28 @@ public class Helicopter extends Aircraft implements Flyable {
 
 		switch (weather) {
 			case "SUN":
-				c.changeLatitude(10);
+				c.changeLongitude(10);
 				c.changeHeight(2);
 				if (c.getHeight() > 100)
                 c.setHeight(100);
 				this.logMessage("This is hot.");
 				break;
 			case "RAIN":
-				c.changeLatitude(5);
+				c.changeLongitude(5);
 				this.logMessage("This is wet.");
 				break;
 			case "FOG":
-				c.changeLatitude(1);
+				c.changeLongitude(1);
 				this.logMessage("I can't see anything!");
 				break;
 			case "SNOW":
-				c.changeHeight(7);
-				if (c.getHeight() > 100)
-					c.setHeight(100);
-				this.logMessage("My rotor is going to freeze!");
+				c.changeHeight(-12);
+				if (c.getHeight() <= 0) {
+					c.setHeight(0);
+					weatherTower.unregister(this);
+				}
+				else
+					this.logMessage("My rotor is going to freeze!");
 				break;
 		}
 	}
