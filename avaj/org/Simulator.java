@@ -11,14 +11,14 @@ class Simulator {
 	try	{
 		if (args.length == 1) {
 			this.createFile();
-			WeatherTower weatherTower = new WeatherTower();
+			WeatherTower wt = new WeatherTower();
 			File myObj = new File(args[0]);
 			Scanner myReader = new Scanner(myObj);
 			while (myReader.hasNextLine()) {
 				String data = myReader.nextLine();
 				String[] arrOfStr = data.split(" ", 0);
 				if (arrOfStr.length == 1) {
-					
+					int numOfSimul = Integer.parseInt(arrOfStr[0]);
 				}
 				else if (arrOfStr.length == 5) {
 					String type = arrOfStr[0];
@@ -27,7 +27,7 @@ class Simulator {
 					int latitude = Integer.parseInt(arrOfStr[3]);
 					int height = Integer.parseInt(arrOfStr[4]);
 					Flyable aircraft = AircraftFactory.newAircraft(type, name, longitude, latitude, height);
-					weatherTower.register(aircraft);
+					wt.register(aircraft);
 				}
 				else {
 					throw new WrongFormatException("File format is invalid");
@@ -35,6 +35,9 @@ class Simulator {
 				System.out.println(data);
 			}
 			myReader.close();
+			WeatherProvider wp = WeatherProvider.getProvider();
+			wt.conditionChanged();
+
 		} else {
 			throw new NumOfArgsException("Number of arguments is not 1");
 		}

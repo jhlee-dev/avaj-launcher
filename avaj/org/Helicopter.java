@@ -23,8 +23,8 @@ public class Helicopter extends Aircraft implements Flyable {
 	}
 	@Override
 	public void updateConditions() {
-		String weather = weatherTower.getWeather();
 		Coordinates c = super.coordinates;
+		String weather = this.weatherTower.getWeather(c);
 
 		switch (weather) {
 			case "SUN":

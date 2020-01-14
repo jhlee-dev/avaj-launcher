@@ -6,14 +6,15 @@ import java.util.Arrays;
 
 public class Tower {
 
-	private Flyable observers;
+	private ArrayList<Flyable> observers;
 
 	public void register(Flyable flyable) {
-		this.observers = flyable;
-		
-		String type = observers.getType();
-		String name = observers.name;
-		long id = observers.id;
+		if (this.observers == null)
+			this.observers = new ArrayList<Flyable>();
+		this.observers.add(flyable);
+		String type = flyable.getType();
+		String name = flyable.name;
+		long id = flyable.id;
 		String message = "Tower says: " + type + "#" + name + "(" + id + "): registered to weather tower."	
 		try {
 			FileWriter myWriter = new FileWriter("simulation.txt", true);
@@ -25,9 +26,11 @@ public class Tower {
 		}
 	}
 	public void unregister(Flyable flyable) {
-		this.observers = null;
+			this.observers.remove(flyable);
 	}
 	protected void conditionsChanged() {
-		observers.updateConditions();
+		for (Flyable f : observers) {
+			f.updateConditions();
+		}
 	}
 }
