@@ -6,11 +6,9 @@ import java.util.Arrays;
 
 public class Tower {
 
-	private ArrayList<Flyable> observers;
+	private ArrayList<Flyable> observers = new ArrayList<Flyable>();
 
 	public void register(Flyable flyable) {
-		if (this.observers == null)
-			this.observers = new ArrayList<Flyable>();
 		this.observers.add(flyable);
 		String type = flyable.getType();
 		String name = flyable.name;
@@ -26,11 +24,13 @@ public class Tower {
 		}
 	}
 	public void unregister(Flyable flyable) {
-			this.observers.remove(flyable);
+		int i = this.observers.indexOf(flyable);
+		if (i >= 0)
+			this.observers.remove(i);
 	}
 	protected void conditionsChanged() {
-		for (Flyable f : observers) {
-			f.updateConditions();
+		for (Flyable o : observers) {
+			o.updateConditions();
 		}
 	}
 }

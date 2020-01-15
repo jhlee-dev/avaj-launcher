@@ -27,6 +27,7 @@ class Simulator {
 					int latitude = Integer.parseInt(arrOfStr[3]);
 					int height = Integer.parseInt(arrOfStr[4]);
 					Flyable aircraft = AircraftFactory.newAircraft(type, name, longitude, latitude, height);
+					
 					wt.register(aircraft);
 				}
 				else {
